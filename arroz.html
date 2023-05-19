@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+
+        /*promedio anual */
+        function cosechaArroz(cosechas) {
+            let totalCosechas = 0;
+            for (let i=0; i < cosechas.length; i++){
+                totalCosechas += cosechas[i];
+            }
+            let promedioAnual =totalCosechas/cosechas.length;
+        
+        /*en que meses*/
+        let meseseSuperiores = [];
+        for (let i=0; i < cosechas.length; i++){
+            if (cosechas [i]>promedioAnual){
+                meseseSuperiores.push(i + 1)
+            }
+        }
+        /*que mes tuvo la mayor cosecha*/
+        let mesMayorCosecha =0;
+        let mayorCosecha=0;
+        for(let i=0;i < cosechas.length; i++){
+            if(cosechas[i] > mayorCosecha){
+                mayorCosecha = cosechas[i]
+                mesMayorCosecha = i + 1;
+            }
+        }
+        return `${promedioAnual} ${mesesesSuperiores.join(", ")}.${mesMayorCosecha}.`;
+    }
+     const cosechasAnuales = [1500,1800,1300,1400,1600,1200,1000,1800,1900,800,1150,850]
+        console.log(cosechaArroz(cosechasAnuales));
+    </script>
+</body>
+</html>
